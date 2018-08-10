@@ -3,6 +3,7 @@ export class Quote {
     public id: number,
     public name: string,
     public quote: string,
+    public tag: string,
     public note?: string
   ) { }
 }
