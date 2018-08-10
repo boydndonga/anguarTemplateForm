@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteFormComponent implements OnInit {
 
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
   constructor() { }
 
   ngOnInit() {
