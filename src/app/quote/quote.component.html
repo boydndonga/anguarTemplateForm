@@ -1,3 +1,10 @@
 <div class="container">
   <app-quote-form></app-quote-form>
+
+  <ul *ngFor='let quote of quotes'>
+    <li>
+      <p>{{quote.name}}</p>
+      <p>{{quote.quote}}</p>
+    </li>
+  </ul>
 </div>
