@@ -8,6 +8,9 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-form.component.css'],
 })
 export class QuoteFormComponent implements OnInit {
+
+  tags = [ 'hilarious', 'thats serious', 'techy'];
+
   submitted = false;
 
   onSubmit() { this.submitted = true; }
