@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote';
 
 
@@ -11,6 +11,7 @@ import { Quote } from '../quote';
 export class QuoteFormComponent implements OnInit {
 
   tags = [ 'hilarious', 'thats serious', 'techy'];
+
   formQuote = new Quote(1, 'Boyd', 'this is quote1',
     this.tags[0], 'look inspired by this quote');
 
@@ -20,9 +21,9 @@ export class QuoteFormComponent implements OnInit {
 
   // get diagnostic() { return JSON.stringify(this.formQuote); }
 
-  newQuote() {
-    this.formQuote = new Quote(5, '', '', '');
-  }
+  // newQuote() {
+  //   this.formQuote = new Quote(5, '', '', '');
+  // }
   constructor() {}
 
   ngOnInit() {

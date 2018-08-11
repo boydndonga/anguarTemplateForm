@@ -16,6 +16,13 @@ export class QuoteComponent implements OnInit {
     this.quotes = quoteService.getAllQuotes();
   }
 
+  // addNewGoal(quote) {
+  //   const quoteLength = this.quotes.length;
+  //   quote.id = quoteLength + 1;
+  //   this.quotes.push(quote);
+
+  // }
+
   ngOnInit() {
   }
 
