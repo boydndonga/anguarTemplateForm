@@ -21,6 +21,7 @@
         Quote is required
       </div>
     </div>
+
     <!-- {{quote.className}} -->
     <div class="form-group">
       <label for="note">Quick note</label>
@@ -41,28 +42,12 @@
     <button type="button" class="btn btn-default" (click)="newQuote()">New Quote</button>
       <i>without</i> reset
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-default" (click)="newQuote();formQuote.reset()">New Quote</button>
-    <i>with</i> reset
+    <!-- <button type="button" class="btn btn-default" (click)="newQuote();formQuote.reset()">New Quote</button>
+    <i>with</i> reset -->
+
   </form>
 </div>
-<!-- <div [hidden]="!submitted">
-    <h2>You submitted the following:</h2>
-    <div class="row">
-      <div class="col-xs-3">Name</div>
-      <div class="col-xs-9  pull-left">{{ formQuote.name }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">quote</div>
-      <div class="col-xs-9 pull-left">{{ formQuote.quote }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">note</div>
-      <div class="col-xs-9 pull-left">{{ formQuote.note }}</div>
-    </div>
-    <div>
-    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
-  </div>
-</div> -->
+
 <div [hidden]="!submitted">
   <ul *ngFor='let quote of quotes'>
       <li>

@@ -10,19 +10,10 @@ import { Quote } from '../quote';
 
 })
 export class QuoteComponent implements OnInit {
-  quotes: Quote[];
 
-  constructor(quoteService: QuotesService) {
-    this.quotes = quoteService.getAllQuotes();
+  constructor() {
+
   }
-
-  // addNewGoal(quote) {
-  //   const quoteLength = this.quotes.length;
-  //   quote.id = quoteLength + 1;
-  //   this.quotes.push(quote);
-
-  // }
-
   ngOnInit() {
   }
 
