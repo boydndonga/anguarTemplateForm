@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Quotes } from '../quotes';
 
 
 @Component({
@@ -10,11 +9,10 @@ import { Quotes } from '../quotes';
 export class QuoteFormComponent implements OnInit {
 
   tags = [ 'hilarious', 'thats serious', 'techy'];
-
   submitted = false;
 
   onSubmit() { this.submitted = true; }
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
