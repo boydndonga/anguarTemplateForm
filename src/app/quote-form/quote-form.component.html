@@ -11,9 +11,9 @@
     <div class="form-group">
       <label for="quote">Your Quote</label>
       <input type="text" class="form-control" id="quote" required
-      [(ngModel)]="formQuote.quote" name="quote">
+      [(ngModel)]="formQuote.quote" name="quote" #spy>
     </div>
-
+    {{spy.className}}
     <div class="form-group">
       <label for="note">Quick note</label>
       <input type="text" class="form-control" id="note"
