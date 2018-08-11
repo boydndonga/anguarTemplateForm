@@ -1,16 +1,18 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote';
-
+import { QuotesService } from '../quoteService/quotes.service';
 
 
 @Component({
   selector: 'app-quote-form',
   templateUrl: './quote-form.component.html',
   styleUrls: ['./quote-form.component.css'],
+  providers: [QuotesService]
 })
 export class QuoteFormComponent implements OnInit {
 
   tags = [ 'hilarious', 'thats serious', 'techy'];
+  quotes: Quote[];
 
   formQuote = new Quote(1, 'Boyd', 'this is quote1',
     this.tags[0], 'look inspired by this quote');
@@ -21,10 +23,15 @@ export class QuoteFormComponent implements OnInit {
 
   // get diagnostic() { return JSON.stringify(this.formQuote); }
 
-  // newQuote() {
-  //   this.formQuote = new Quote(5, '', '', '');
-  // }
-  constructor() {}
+  newQuote() {
+    const quoteLength = this.quotes.length;
+    this.formQuote = new Quote(quoteLength + 1, '', '', '');
+    this.quotes.push(this.formQuote);
+  }
+
+  constructor(quoteService: QuotesService) {
+    this.quotes = quoteService.getAllQuotes();
+  }
 
   ngOnInit() {
   }
