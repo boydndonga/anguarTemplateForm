@@ -29,6 +29,16 @@ export class QuoteFormComponent implements OnInit {
     this.quotes.push(this.formQuote);
   }
 
+  updateQuoteById(id: number): Quote {
+        for (const quote of this.quotes) {
+          if (quote.id === id) {
+            // alert(quote.id);
+            this.formQuote = new Quote(quote.id, quote.name, quote.quote,
+            quote.tag, quote.note);
+            return this.formQuote;
+          }
+    }
+  }
   constructor(quoteService: QuotesService) {
     this.quotes = quoteService.getAllQuotes();
   }

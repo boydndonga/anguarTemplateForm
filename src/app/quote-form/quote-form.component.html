@@ -1,6 +1,6 @@
-<div >
+<div [hidden]="submitted">
   <h1>Quote Form</h1>
-  <form (ngSubmit)="onSubmit()" #quoteForm=ngForm >
+  <form (ngSubmit)="onSubmit()" #quoteForm="ngForm" >
 
     <div class="form-group">
       <label for="name">Name</label>
@@ -71,6 +71,7 @@
         <p>{{quote.quote}}</p>
         <p>{{quote.tag}}</p>
         <p>{{quote.note}}</p>
+        <button class="btn btn-primary" (click)="submitted=false" (click)="updateQuoteById(quote.id)">Edit</button>
       </li>
   </ul>
 </div>
