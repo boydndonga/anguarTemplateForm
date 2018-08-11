@@ -3,22 +3,26 @@
   <form>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required>
+      <input type="text" class="form-control" id="name" required
+      [(ngModel)]="formQuote.name" name="name">
     </div>
 
     <div class="form-group">
       <label for="quote">Your Quote</label>
-      <input type="text" class="form-control" id="quote">
+      <input type="text" class="form-control" id="quote" required
+      [(ngModel)]="formQuote.quote" name="quote">
     </div>
 
     <div class="form-group">
       <label for="note">Quick note</label>
-      <input type="text" class="form-control" id="note">
+      <input type="text" class="form-control" id="note"
+      [(ngModel)]="formQuote.note" name="note">
     </div>
 
     <div class="form-group">
         <label for="tag">Tag your quotes</label>
-        <select class="form-control" id="tag" required>
+        <select class="form-control" id="tag" required
+        [(ngModel)]="formQuote.tag" name="tag">
           <option *ngFor="let tag of tags" [value]="tag">{{tag}}</option>
         </select>
     </div>
