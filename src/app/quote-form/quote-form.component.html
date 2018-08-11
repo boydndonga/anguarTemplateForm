@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Quote Form</h1>
-  <form #quoteForm=ngForm>
+  <form #quoteForm=ngForm (ngSubmit)="onSubmit()">
 
     <div class="form-group">
       <label for="name">Name</label>
@@ -32,7 +32,9 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-success" (click)="newQuote();quoteForm.reset()">Submit</button>
+    <button type="submit" class="btn btn-success" (click)="newQuote();quoteForm.reset()" [disabled]="!quoteForm.form.valid">
+      Submit
+    </button>
 
   </form>
 </div>
